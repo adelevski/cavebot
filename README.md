@@ -76,6 +76,8 @@ accuracy, provenance, attribution, and licensing terms. The deterministic test f
 a minimal hand-authored transcription of three factual rows, documented in
 `tests/fixtures/README.md`; it is not a full Wikipedia snapshot.
 
-This repository does not currently contain a license file. Selecting a project license
-and confirming the required upstream attribution are owner decisions that should be
-resolved before public redistribution. This cleanup intentionally does not guess them.
+Project-authored code and documentation are licensed under [MIT](LICENSE).
+This does not relicense Wikipedia-derived records, including
+`tests/fixtures/deepest_caves_table.html`, or map tiles and other third-party assets.
+Preserve the applicable source terms and attribution when redistributing data or
+generated maps. Dependencies retain their own licenses.

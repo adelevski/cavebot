@@ -22,8 +22,8 @@ HTML map. Keep source parsing, normalized records, and map rendering separate.
   clearly or be skipped with an explicit diagnostic, never fabricate a location.
 - Generated maps are reproducible artifacts, not source. Keep dataset, tile,
   image, and source attribution with any published output.
-- No source license is present. Resolve source ownership, data provenance, and
-  redistribution terms before describing a public release as Apache-2.0.
+- Project-authored code uses [MIT](LICENSE). Wikipedia-derived data and the
+  fixture described in `tests/fixtures/README.md` retain their upstream terms.
 
 ## Working agreements
 

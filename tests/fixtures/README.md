@@ -6,6 +6,7 @@ factual rows transcribed from Wikipedia's
 2026-08-27. It preserves representative table structure, citations, relative article
 links, decimal/DMS coordinates, and both hemispheres; it is not a full page snapshot.
 
-The upstream page is mutable and has its own attribution and licensing terms. This
-repository currently has no license file. The owner should decide project licensing and
-confirm the appropriate upstream attribution before public redistribution.
+The upstream page is mutable and has its own attribution and licensing terms.
+The project code's [MIT license](../../LICENSE) does not relicense these
+Wikipedia-derived records. Confirm and preserve the applicable upstream terms
+and attribution before redistributing this fixture or generated data.
