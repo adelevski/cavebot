@@ -1,6 +1,6 @@
-# cave atlas
+# spelunk
 
-[Open cave atlas](https://snowball-projects.github.io/cave-atlas/) · [snowball](https://snowball-projects.github.io/)
+[Open spelunk](https://snowball-projects.github.io/spelunk/) · [snowball](https://snowball-projects.github.io/)
 
 Explore cave locations and compare surveyed depth and passage length. Search or filter the catalogue, sort by depth or length, and select caves for a compact comparison. The map fills the screen; controls and results collapse independently, with bottom sheets on mobile.
 
@@ -39,3 +39,8 @@ Open `http://127.0.0.1:8770`. On Windows activate `.venv\Scripts\Activate.ps1` a
 Original code, documentation and project artwork use [MIT](LICENSE). Wikipedia-derived data uses CC BY-SA 4.0; Leaflet and map tiles retain their own terms. See [third-party notices](THIRD-PARTY-NOTICES.txt).
 
 A snowball project, founded by Nas Delevski. This repository continues the original cavebot experiment; history and the v0.1.x tags are preserved. Version 0.2.0 replaces the old Python/Folium map command with the static dashboard. Its parser and relevant tests remain; the old command is available in the earlier tags.
+
+Version 0.3.0 renames cave atlas to **spelunk**. Its identity is inspired by
+digital exploration inside caves. The current app is still a map and measurement
+comparison; rotatable 3D surveys are the next planned feature, only where real
+measurements/models and suitable permissions are available.

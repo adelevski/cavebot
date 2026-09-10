@@ -16,7 +16,7 @@ test("catalogue filters, comparison values and source links", async ({
   const errors = [];
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/");
-  await expect(page).toHaveTitle("cave atlas");
+  await expect(page).toHaveTitle("spelunk");
   await expect(page.locator(".cave")).toHaveCount(45);
   await expect(page.locator("#results")).toBeHidden();
   await page.getByRole("searchbox").fill("Mexico");

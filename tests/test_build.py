@@ -27,7 +27,7 @@ def test_rejects_unsafe_article_link(catalog):
 def test_static_build_has_local_assets_and_provenance(tmp_path):
     output = build(tmp_path / 'site')
     page = (output / 'index.html').read_text()
-    assert 'cave atlas' in page
+    assert 'spelunk' in page
     assert '__CATALOG__' not in page
     assert '1372337231' in page
     assert 'unpkg.com' not in page

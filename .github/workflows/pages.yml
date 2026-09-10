@@ -1,4 +1,4 @@
-name: Verify and deploy cave atlas
+name: Verify and deploy spelunk
 on:
   push:
     branches: [main]

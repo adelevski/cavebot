@@ -77,7 +77,7 @@ def build(destination: Path | None = None) -> Path:
     (destination / '.nojekyll').touch()
     (destination / 'version.json').write_text(json.dumps({'version': version, 'catalogue_date': catalog['metadata']['retrieved']})+'\n')
     total = sum(p.stat().st_size for p in destination.rglob('*') if p.is_file())
-    print(f'Built cave atlas {version}: {len(catalog["caves"])} caves; {total:,} bytes')
+    print(f'Built spelunk {version}: {len(catalog["caves"])} caves; {total:,} bytes')
     return destination
 
 

@@ -1,10 +1,10 @@
-# Operating cave atlas
+# Operating spelunk
 
 ## Deployment and release
 
-Canonical source: https://github.com/snowball-projects/cave-atlas
+Canonical source: https://github.com/snowball-projects/spelunk
 
-Live interface: https://snowball-projects.github.io/cave-atlas/
+Live interface: https://snowball-projects.github.io/spelunk/
 
 GitHub Pages is configured to use GitHub Actions. `.github/workflows/pages.yml` tests changes and deploys successful main builds. PR checks cannot deploy. Static output is `dist/`; relative asset paths support the repository subpath and local previews. No custom domain or runtime secret is required.
 
@@ -27,3 +27,7 @@ If tiles fail, the list, filters and comparisons remain usable. If the map libra
 There are no scheduled catalogue refreshes or runtime source queries. A dormant site retains its dated reviewed snapshot. Rebuild using the committed catalogue, pinned frontend tooling and vendored Leaflet; Python's standard library is sufficient for the build. Development dependencies are only required to test or refresh data. No historical browser environment, external database, or paid account is needed to revive the static site.
 
 Monitor deployment failures when making changes. Before reactivating maintenance, verify source coverage, links, map-provider terms and dependency updates, then make a reviewed release. Keep detailed project documentation here rather than copying it into snowball's project card.
+
+## Name and URL continuity
+
+Version 0.3.0 renamed `snowball-projects/cave-atlas` to `snowball-projects/spelunk`; GitHub preserves repository/history redirects. The snowball website owns static redirect pages at `/cave-atlas/` and `/projects/cave-atlas/`, pointing to `/spelunk/` and `/projects/spelunk/`. Keep those redirects when editing the parent site. The old app had no saved URL-based selection state. Do not create a new repository at the old name, which would displace GitHub's source redirect.

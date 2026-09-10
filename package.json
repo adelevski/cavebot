@@ -1,6 +1,6 @@
 {
-  "name": "cave-atlas",
-  "version": "0.2.0",
+  "name": "spelunk",
+  "version": "0.3.0",
   "private": true,
   "description": "Explore and compare surveyed caves.",
   "author": "snowball",

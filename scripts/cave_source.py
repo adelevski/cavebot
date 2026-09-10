@@ -11,7 +11,7 @@ DEFAULT_SOURCE_URL = "https://en.wikipedia.org/wiki/List_of_deepest_caves"
 
 
 class CaveAtlasError(RuntimeError):
-    """Base error for expected cave atlas failures."""
+    """Base error for expected spelunk failures."""
 
 
 class CaveTableError(CaveAtlasError):

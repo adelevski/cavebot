@@ -1,4 +1,4 @@
-cave atlas third-party notices
+spelunk third-party notices
 
 Original project code, documentation and artwork: MIT; see LICENSE.
 

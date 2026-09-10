@@ -18,7 +18,7 @@ def main():
     parser.add_argument('--output', type=Path, default=Path('candidate-caves.json'))
     args = parser.parse_args()
     source = f'https://en.wikipedia.org/w/index.php?title=List_of_deepest_caves&oldid={args.revision}'
-    req = Request(source, headers={'User-Agent': 'cave-atlas (+https://github.com/snowball-projects/cave-atlas)', 'Accept': 'text/html'})
+    req = Request(source, headers={'User-Agent': 'spelunk (+https://github.com/snowball-projects/spelunk)', 'Accept': 'text/html'})
     with urlopen(req, timeout=20) as response:
         raw = response.read(5_000_001)
     if len(raw) > 5_000_000:

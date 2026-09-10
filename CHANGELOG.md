@@ -1,5 +1,12 @@
 # Changes
 
+## 0.3.0 — 2026-09-10
+
+- Rename cave atlas to `spelunk`, keeping source history and prior releases.
+- Replace the map/entrance artwork with a single-color passage-in-depth mark, including app icons and favicons.
+- Update canonical source and live URLs; preserve old app and snowball project URLs through the snowball site.
+- Make real-survey 3D exploration the next feature priority. No 3D viewer, generated cave geometry or additional catalogue entries ship in this release.
+
 ## 0.2.0 — 2026-09-09
 
 First cave atlas dashboard release, continuing the cavebot repository under snowball-projects.
