@@ -1,0 +1,4 @@
+web/vendor/
+dist/
+node_modules/
+assets/

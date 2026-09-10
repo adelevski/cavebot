@@ -10,11 +10,11 @@ from bs4 import BeautifulSoup, Tag
 DEFAULT_SOURCE_URL = "https://en.wikipedia.org/wiki/List_of_deepest_caves"
 
 
-class CavebotError(RuntimeError):
-    """Base error for expected Cavebot failures."""
+class CaveAtlasError(RuntimeError):
+    """Base error for expected cave atlas failures."""
 
 
-class CaveTableError(CavebotError):
+class CaveTableError(CaveAtlasError):
     """Raised when the source table is missing or has an unsupported shape."""
 
 

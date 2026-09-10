@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from cavebot.core import CaveTableError, parse_cave_table, parse_coordinate_pair
+from scripts.cave_source import CaveTableError, parse_cave_table, parse_coordinate_pair
 
 
 FIXTURE = Path(__file__).parent / "fixtures" / "deepest_caves_table.html"

@@ -1,0 +1,461 @@
+{
+  "metadata": {
+    "source": "https://en.wikipedia.org/w/index.php?title=List_of_deepest_caves&oldid=1372337231",
+    "retrieved": "2026-09-09",
+    "license": "CC-BY-SA-4.0",
+    "coordinate_precision_degrees": 0.1,
+    "source_sha256": "7012b24a78be2de4b239b4c2f27c9ef75e0c158874f484fdcc492e76cfc77807"
+  },
+  "caves": [
+    {
+      "name": "Krubera-Voronja Cave",
+      "depth_m": 2224,
+      "length_km": 23.0,
+      "location": "Abkhazia / Georgia",
+      "latitude": 43.4,
+      "longitude": 40.3,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Krubera_Cave",
+      "id": "wiki-krubera-voronja-cave"
+    },
+    {
+      "name": "Veryovkina Cave",
+      "depth_m": 2209,
+      "length_km": 17.5,
+      "location": "Abkhazia / Georgia",
+      "latitude": 43.4,
+      "longitude": 40.4,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Veryovkina_Cave",
+      "id": "wiki-veryovkina-cave"
+    },
+    {
+      "name": "Sarma Cave",
+      "depth_m": 1830,
+      "length_km": 19.2,
+      "location": "Abkhazia / Georgia",
+      "latitude": 43.4,
+      "longitude": 40.4,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sarma_Cave",
+      "id": "wiki-sarma-cave"
+    },
+    {
+      "name": "Tovliani Cave",
+      "depth_m": 1760,
+      "length_km": 40.8,
+      "location": "Abkhazia / Georgia",
+      "latitude": 43.3,
+      "longitude": 40.7,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tovliani_Cave?action=edit&redlink=1",
+      "id": "wiki-tovliani-cave-ka"
+    },
+    {
+      "name": "Lamprechtsofen",
+      "depth_m": 1727,
+      "length_km": 61.0,
+      "location": "Austria",
+      "latitude": 47.5,
+      "longitude": 12.7,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lamprechtsofen",
+      "id": "wiki-lamprechtsofen"
+    },
+    {
+      "name": "Gouffre Mirolda",
+      "depth_m": 1661,
+      "length_km": 22.0,
+      "location": "France",
+      "latitude": 46.1,
+      "longitude": 6.8,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gouffre_Mirolda",
+      "id": "wiki-gouffre-mirolda"
+    },
+    {
+      "name": "Gouffre Jean-Bernard",
+      "depth_m": 1612,
+      "length_km": 30.2,
+      "location": "France",
+      "latitude": 46.1,
+      "longitude": 6.8,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gouffre_Jean-Bernard",
+      "id": "wiki-gouffre-jean-bernard"
+    },
+    {
+      "name": "Sistema del Cerro del Cuevón",
+      "depth_m": 1589,
+      "length_km": 7.0,
+      "location": "Spain",
+      "latitude": 43.2,
+      "longitude": -4.9,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sistema_del_Cerro_del_Cuevón?action=edit&redlink=1",
+      "id": "wiki-sistema-del-cerro-del-cuev-n-es"
+    },
+    {
+      "name": "Hirlatzhöhle",
+      "depth_m": 1560,
+      "length_km": 117.8,
+      "location": "Austria",
+      "latitude": 47.5,
+      "longitude": 13.6,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hirlatzhöhle",
+      "id": "wiki-hirlatzh-hle"
+    },
+    {
+      "name": "Sistema Huautla",
+      "depth_m": 1560,
+      "length_km": 100.2,
+      "location": "Mexico",
+      "latitude": 18.1,
+      "longitude": -96.8,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sistema_Huautla",
+      "id": "wiki-sistema-huautla"
+    },
+    {
+      "name": "Chevé Cave",
+      "depth_m": 1538,
+      "length_km": 96.1,
+      "location": "Mexico",
+      "latitude": 17.9,
+      "longitude": -96.8,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chevé_Cave",
+      "id": "wiki-chev-cave"
+    },
+    {
+      "name": "Boybuloq",
+      "depth_m": 1523,
+      "length_km": 19.9,
+      "location": "Uzbekistan",
+      "latitude": 38.4,
+      "longitude": 67.5,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Boybuloq",
+      "id": "wiki-boybuloq"
+    },
+    {
+      "name": "Pantyukhin Cave",
+      "depth_m": 1508,
+      "length_km": 7.9,
+      "location": "Abkhazia / Georgia",
+      "latitude": 43.3,
+      "longitude": 40.5,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pantyukhin_Cave?action=edit&redlink=1",
+      "id": "wiki-pantyukhin-cave-ka"
+    },
+    {
+      "name": "Sima de la Cornisa",
+      "depth_m": 1507,
+      "length_km": 6.4,
+      "location": "Spain",
+      "latitude": 43.2,
+      "longitude": -4.9,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sima_de_la_Cornisa?action=edit&redlink=1",
+      "id": "wiki-sima-de-la-cornisa-ru"
+    },
+    {
+      "name": "Čehi 2",
+      "depth_m": 1505,
+      "length_km": 5.5,
+      "location": "Slovenia",
+      "latitude": 46.4,
+      "longitude": 13.5,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Čehi_2_cave",
+      "id": "wiki-ehi-2"
+    },
+    {
+      "name": "Sistema del Trave",
+      "depth_m": 1441,
+      "length_km": 9.1,
+      "location": "Spain",
+      "latitude": 43.2,
+      "longitude": -4.9,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sistema_del_Trave?action=edit&redlink=1",
+      "id": "wiki-sistema-del-trave-fr"
+    },
+    {
+      "name": "Lukina-Trojama system",
+      "depth_m": 1431,
+      "length_km": 3.7,
+      "location": "Croatia",
+      "latitude": 44.8,
+      "longitude": 15.0,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Velebit_caves",
+      "id": "wiki-lukina-trojama-system"
+    },
+    {
+      "name": "Egma Sinkhole",
+      "depth_m": 1429,
+      "length_km": 3.1,
+      "location": "Turkey",
+      "latitude": 36.3,
+      "longitude": 32.8,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Egma_Sinkhole",
+      "id": "wiki-egma-sinkhole"
+    },
+    {
+      "name": "Gouffre de la Pierre Saint-Martin",
+      "depth_m": 1410,
+      "length_km": 88.1,
+      "location": "France, Spain",
+      "latitude": 43.0,
+      "longitude": -0.8,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gouffre_de_la_Pierre_Saint-Martin",
+      "id": "wiki-gouffre-de-la-pierre-saint-martin"
+    },
+    {
+      "name": "Kuzgun Cave",
+      "depth_m": 1400,
+      "length_km": 3.1,
+      "location": "Turkey",
+      "latitude": 37.8,
+      "longitude": 35.3,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kuzgun_Cave?action=edit&redlink=1",
+      "id": "wiki-kuzgun-cave-ru"
+    },
+    {
+      "name": "Hochscharten-Höhlensystem",
+      "depth_m": 1394,
+      "length_km": 14.6,
+      "location": "Austria",
+      "latitude": 47.6,
+      "longitude": 13.1,
+      "wikipedia_url": null,
+      "id": "wiki-hochscharten-h-hlensystem"
+    },
+    {
+      "name": "Črnelsko brezno",
+      "depth_m": 1393,
+      "length_km": 20.0,
+      "location": "Slovenia",
+      "latitude": 46.4,
+      "longitude": 13.5,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Črnelsko_brezno?action=edit&redlink=1",
+      "id": "wiki-rnelsko-brezno-sl"
+    },
+    {
+      "name": "Abisso Paolo Roversi",
+      "depth_m": 1360,
+      "length_km": 4.2,
+      "location": "Italy",
+      "latitude": 44.1,
+      "longitude": 10.2,
+      "wikipedia_url": null,
+      "id": "wiki-abisso-paolo-roversi"
+    },
+    {
+      "name": "Sistema Arañonera-Tendenera",
+      "depth_m": 1349,
+      "length_km": 46.3,
+      "location": "Spain",
+      "latitude": 42.7,
+      "longitude": -0.1,
+      "wikipedia_url": null,
+      "id": "wiki-sistema-ara-onera-tendenera"
+    },
+    {
+      "name": "Sima del Sabbat (B112)",
+      "depth_m": 1346,
+      "length_km": 6.7,
+      "location": "Spain",
+      "latitude": 42.5,
+      "longitude": 0.3,
+      "wikipedia_url": null,
+      "id": "wiki-sima-del-sabbat-b112"
+    },
+    {
+      "name": "BU 56",
+      "depth_m": 1340,
+      "length_km": 38.9,
+      "location": "Spain",
+      "latitude": 42.9,
+      "longitude": -0.8,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/BU_56?action=edit&redlink=1",
+      "id": "wiki-bu-56-fr"
+    },
+    {
+      "name": "Siebenhengste-Hohgant-Höhle",
+      "depth_m": 1340,
+      "length_km": 164.5,
+      "location": "Switzerland",
+      "latitude": 46.8,
+      "longitude": 7.9,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Siebenhengste-Hohgant-Höhle",
+      "id": "wiki-siebenhengste-hohgant-h-hle"
+    },
+    {
+      "name": "Nedam",
+      "depth_m": 1335,
+      "length_km": 3.3,
+      "location": "Croatia",
+      "latitude": 44.8,
+      "longitude": 15.0,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nedam?action=edit&redlink=1",
+      "id": "wiki-nedam-hr"
+    },
+    {
+      "name": "Slovačka jama",
+      "depth_m": 1324,
+      "length_km": 6.4,
+      "location": "Croatia",
+      "latitude": 44.7,
+      "longitude": 15.0,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slovačka_jama?action=edit&redlink=1",
+      "id": "wiki-slova-ka-jama-hr"
+    },
+    {
+      "name": "Renetovo brezno",
+      "depth_m": 1322,
+      "length_km": 15.3,
+      "location": "Slovenia",
+      "latitude": 46.4,
+      "longitude": 13.4,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Renetovo_brezno?action=edit&redlink=1",
+      "id": "wiki-renetovo-brezno-sl"
+    },
+    {
+      "name": "Mala Boka",
+      "depth_m": 1319,
+      "length_km": 11.9,
+      "location": "Slovenia",
+      "latitude": 46.3,
+      "longitude": 13.5,
+      "wikipedia_url": null,
+      "id": "wiki-mala-boka"
+    },
+    {
+      "name": "Complesso del Releccio Alfredo Bini",
+      "depth_m": 1313,
+      "length_km": 25.3,
+      "location": "Italy",
+      "latitude": 46.0,
+      "longitude": 9.4,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Complesso_del_Releccio_Alfredo_Bini?action=edit&redlink=1",
+      "id": "wiki-complesso-del-releccio-alfredo-bini-it"
+    },
+    {
+      "name": "Jojar Cave",
+      "depth_m": 1300,
+      "length_km": 2.2,
+      "location": "Iran",
+      "latitude": 34.4,
+      "longitude": 47.3,
+      "wikipedia_url": null,
+      "id": "wiki-jojar-cave"
+    },
+    {
+      "name": "Cosanostraloch - Berger - Platteneck  Höhlensystem",
+      "depth_m": 1291,
+      "length_km": 30.3,
+      "location": "Austria",
+      "latitude": 47.6,
+      "longitude": 13.2,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cosanostraloch_-_Berger_-_Platteneck_Höhlensystem?action=edit&redlink=1",
+      "id": "wiki-cosanostraloch-berger-platteneck-h-hlensystem-de"
+    },
+    {
+      "name": "Ilyukhin Cave",
+      "depth_m": 1286,
+      "length_km": 8.9,
+      "location": "Abkhazia / Georgia",
+      "latitude": 43.4,
+      "longitude": 40.4,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ilyukhin_Cave?action=edit&redlink=1",
+      "id": "wiki-ilyukhin-cave-ka"
+    },
+    {
+      "name": "Višnevskij Cave",
+      "depth_m": 1283,
+      "length_km": 8.5,
+      "location": "Uzbekistan",
+      "latitude": 38.4,
+      "longitude": 67.5,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Boybuloq#Višnevskij_Cave",
+      "id": "wiki-vi-nevskij-cave"
+    },
+    {
+      "name": "Cueva Charco",
+      "depth_m": 1278,
+      "length_km": 6.7,
+      "location": "Mexico",
+      "latitude": 17.9,
+      "longitude": -96.8,
+      "wikipedia_url": null,
+      "id": "wiki-cueva-charco"
+    },
+    {
+      "name": "Morca Cave",
+      "depth_m": 1276,
+      "length_km": 5.7,
+      "location": "Turkey",
+      "latitude": 36.3,
+      "longitude": 32.7,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Morca_Cave",
+      "id": "wiki-morca-cave"
+    },
+    {
+      "name": "Sistema del (Pozu) Xitu - Cueva de Culiembro",
+      "depth_m": 1264,
+      "length_km": 10.7,
+      "location": "Spain",
+      "latitude": 43.2,
+      "longitude": -4.9,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sistema_del_(Pozu)_Xitu_-_Cueva_de_Culiembro?action=edit&redlink=1",
+      "id": "wiki-sistema-del-pozu-xitu-cueva-de-culiembro-es"
+    },
+    {
+      "name": "Moskovuri",
+      "depth_m": 1260,
+      "length_km": 2.5,
+      "location": "Abkhazia / Georgia",
+      "latitude": 43.4,
+      "longitude": 40.4,
+      "wikipedia_url": null,
+      "id": "wiki-moskovuri"
+    },
+    {
+      "name": "Gouffre Berger",
+      "depth_m": 1258,
+      "length_km": 45.0,
+      "location": "France",
+      "latitude": 45.2,
+      "longitude": 5.6,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gouffre_Berger",
+      "id": "wiki-gouffre-berger"
+    },
+    {
+      "name": "Réseau du Casoar",
+      "depth_m": 1258,
+      "length_km": 17.3,
+      "location": "Papua New Guinea",
+      "latitude": -5.5,
+      "longitude": 151.3,
+      "wikipedia_url": null,
+      "id": "wiki-r-seau-du-casoar"
+    },
+    {
+      "name": "Torca dos los Rebecos",
+      "depth_m": 1255,
+      "length_km": 2.2,
+      "location": "Spain",
+      "latitude": 43.2,
+      "longitude": -4.9,
+      "wikipedia_url": null,
+      "id": "wiki-torca-dos-los-rebecos"
+    },
+    {
+      "name": "Pozo del Madejuno",
+      "depth_m": 1252,
+      "length_km": 2.8,
+      "location": "Spain",
+      "latitude": 43.2,
+      "longitude": -4.8,
+      "wikipedia_url": null,
+      "id": "wiki-pozo-del-madejuno"
+    },
+    {
+      "name": "Sistema J2",
+      "depth_m": 1229,
+      "length_km": 14.8,
+      "location": "Mexico",
+      "latitude": 17.9,
+      "longitude": -96.8,
+      "wikipedia_url": null,
+      "id": "wiki-sistema-j2"
+    }
+  ]
+}

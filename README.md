@@ -1,83 +1,41 @@
-# Cavebot
+# cave atlas
 
-Cavebot builds an interactive HTML map from the first `wikitable` on Wikipedia's
-[`List of deepest caves`](https://en.wikipedia.org/wiki/List_of_deepest_caves).
+[Open cave atlas](https://snowball-projects.github.io/cave-atlas/) · [snowball](https://snowball-projects.github.io/)
 
-It performs one bounded HTTP request, finds columns by header name, parses decimal or
-degrees/minutes/seconds coordinates with standard-library math, and gives the resulting
-records to Folium for map rendering. It does not launch a browser or require Firefox,
-Geckodriver, Selenium, pandas, or `latlon`.
+Explore cave locations and compare surveyed depth and passage length. Search or filter the catalogue, sort by depth or length, and select caves for a compact comparison. The map fills the screen; controls and results collapse independently, with bottom sheets on mobile.
 
-## Install
+The initial catalogue contains 45 records from a reviewed snapshot of Wikipedia's deepest-caves list. It is not a world inventory, a verified ranking, or a guide to entering caves. Locations are rounded to 0.1°; visitor access is unknown. [Data sources and updating](data/README.md).
 
-Cavebot requires Python 3.10 or newer.
+## Run and verify
 
-```bash
-python -m venv .venv
+Use Node 24 and Python 3.10 or newer. There are no Node production dependencies, backend, accounts, API keys or runtime data queries. Leaflet 1.9.4 is vendored; only ordinary OpenStreetMap tile requests leave the site while browsing. Wikipedia and Google open only when their links are clicked.
+
+```sh
+python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e ".[dev]"
+python -m pip install -r requirements-dev.txt
+npm ci
+npx playwright install chromium
+npm run verify
+npm run preview
 ```
 
-On PowerShell, activate with `.\.venv\Scripts\Activate.ps1`; the remaining commands are
-the same.
+Open `http://127.0.0.1:8770`. On Windows activate `.venv\Scripts\Activate.ps1` and use `python` if `python3` is not an alias. The build itself uses only Python's standard library: `python scripts/build.py`.
 
-## Generate a map
+`npm run test` runs offline parser/data tests. Browser tests intercept map tiles and make no provider requests. CI repeats both checks, builds `dist/`, and deploys main to GitHub Pages. `package.json` owns the version; `dist/version.json` exposes the deployed version and catalogue date.
 
-```bash
-cavebot --output caves.html
-```
+## Project layout
 
-Equivalent module invocation:
+- `web/`: HTML, CSS, JavaScript, optimized icons and vendored Leaflet.
+- `data/caves.json`: reviewed catalogue and provenance metadata.
+- `scripts/build.py`: offline validation and static build.
+- `scripts/cave_source.py`, `scripts/refresh_catalog.py`: source parsing and candidate refresh.
+- `tests/`: deterministic parser, catalogue and browser behavior checks.
+- [Operations](docs/OPERATIONS.md): deploy, cost, privacy, rollback and dormancy.
+- [Next work](docs/ROADMAP.md): broader catalogue and optional 3D surveys.
 
-```bash
-python -m cavebot --output caves.html
-```
+## Licensing and continuity
 
-Options:
+Original code, documentation and project artwork use [MIT](LICENSE). Wikipedia-derived data uses CC BY-SA 4.0; Leaflet and map tiles retain their own terms. See [third-party notices](THIRD-PARTY-NOTICES.txt).
 
-- `--source-url`: page containing the cave table; defaults to the Wikipedia page above.
-- `--output`: destination HTML file; defaults to `caves.html`.
-- `--timeout`: positive HTTP timeout in seconds; defaults to `20`.
-
-On success the command reports the marker count and output path. The generated HTML is
-ignored by Git because it is a derived snapshot of a mutable source. Open it in a browser
-to load the Folium/Leaflet map; displaying the map also requests third-party map tiles and
-frontend assets referenced by Folium.
-
-## Failures
-
-Cavebot exits nonzero with a concise message when the source request fails, the response
-cannot be decoded, the expected table or headers are missing, a row cannot be parsed, or
-the output file cannot be written. It does not silently skip malformed source rows.
-
-Wikipedia can change its table schema or data at any time. Header-based parsing avoids
-the previous column-position bug, but a future incompatible schema change will still
-require a code update.
-
-## Development and packaging
-
-```bash
-python -m pytest -q
-python -m build
-```
-
-Tests use a three-row local fixture and mocked HTTP responses; they never access the
-network. CI runs the test suite on Python 3.10 and 3.12, checks installed dependencies,
-builds wheel/source distributions, and smoke-tests the wheel outside the checkout.
-
-The package version has one source of truth in `src/cavebot/__init__.py`. Runtime
-dependencies are declared in `pyproject.toml`; the old unbounded `requirements.txt` was
-removed.
-
-## Data provenance and licensing
-
-The live data comes from the linked Wikipedia page and remains subject to that page's
-accuracy, provenance, attribution, and licensing terms. The deterministic test fixture is
-a minimal hand-authored transcription of three factual rows, documented in
-`tests/fixtures/README.md`; it is not a full Wikipedia snapshot.
-
-Project-authored code and documentation are licensed under [MIT](LICENSE).
-This does not relicense Wikipedia-derived records, including
-`tests/fixtures/deepest_caves_table.html`, or map tiles and other third-party assets.
-Preserve the applicable source terms and attribution when redistributing data or
-generated maps. Dependencies retain their own licenses.
+A snowball project, founded by Nas Delevski. This repository continues the original cavebot experiment; history and the v0.1.x tags are preserved. Version 0.2.0 replaces the old Python/Folium map command with the static dashboard. Its parser and relevant tests remain; the old command is available in the earlier tags.

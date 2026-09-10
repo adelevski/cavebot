@@ -1,0 +1,25 @@
+{
+  "name": "cave-atlas",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Explore and compare surveyed caves.",
+  "author": "snowball",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "preview": "python3 -m http.server 8770 --bind 127.0.0.1 --directory dist",
+    "test": "python3 -m pytest -q",
+    "test:browser": "playwright test",
+    "format": "prettier --write web tests/*.mjs *.mjs *.json *.md .github/workflows/*.yml docs/*.md data/*.md",
+    "format:check": "prettier --check web tests/*.mjs *.mjs *.json *.md .github/workflows/*.yml docs/*.md data/*.md",
+    "verify": "npm run test && npm run build && npm run test:browser"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "prettier": "3.9.6"
+  }
+}

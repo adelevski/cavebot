@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fbfaf4" />
+    <title>cave atlas</title>
+    <meta
+      name="description"
+      content="Explore cave locations and compare surveyed depth and passage length."
+    />
+    <link
+      rel="canonical"
+      href="https://snowball-projects.github.io/cave-atlas/"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="vendor/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div id="map" role="region" aria-label="Interactive cave map"></div>
+      <button
+        id="browse-toggle"
+        class="float-button browse-toggle"
+        aria-controls="controls"
+        aria-expanded="true"
+        hidden
+      >
+        <strong>cave atlas</strong
+        ><span id="floating-count" class="badge">__COUNT__</span>
+      </button>
+      <aside id="controls" class="panel controls" aria-label="Find caves">
+        <header class="panel-heading">
+          <div class="title-group">
+            <h1>
+              <img src="icon.png" width="32" height="32" alt="" />cave atlas
+            </h1>
+            <span id="count" class="badge" role="status"></span>
+          </div>
+          <div class="heading-actions">
+            <button
+              id="info"
+              class="icon-button info-button"
+              aria-label="About the data"
+              aria-haspopup="dialog"
+            >
+              i</button
+            ><button
+              id="close-controls"
+              class="icon-button"
+              aria-label="Collapse cave list"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="m14 6-6 6 6 6" />
+              </svg>
+            </button>
+          </div>
+        </header>
+        <section class="filters" aria-label="Filters">
+          <label class="searchbox"
+            ><span class="sr-only">Search caves or regions</span
+            ><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+              <circle cx="10" cy="10" r="6" />
+              <path d="m15 15 5 5" /></svg
+            ><input
+              id="search"
+              type="search"
+              placeholder="Search caves or regions"
+          /></label>
+          <div class="filter-row">
+            <label
+              >Region<select id="region">
+                <option value="">All regions</option>
+              </select></label
+            ><label
+              >Order by<select id="sort">
+                <option value="depth_m">Deepest</option>
+                <option value="length_km">Longest</option>
+                <option value="name">Name A–Z</option>
+              </select></label
+            >
+          </div>
+        </section>
+        <div class="list-toolbar">
+          <span>Select to compare</span
+          ><button id="reset" class="quiet-button">Reset filters</button>
+        </div>
+        <div id="list" class="cave-list"></div>
+        <footer class="panel-bottom">
+          <button id="selection-open" class="selection-open" disabled>
+            No caves selected</button
+          ><button id="clear" class="quiet-button" hidden>Clear</button>
+        </footer>
+      </aside>
+      <button
+        id="results-toggle"
+        class="float-button results-toggle"
+        aria-controls="results"
+        aria-expanded="false"
+        hidden
+      ></button>
+      <aside
+        id="results"
+        class="panel results"
+        aria-label="Selected caves"
+        hidden
+      >
+        <header class="panel-heading">
+          <h2 id="results-title">Comparison</h2>
+          <button
+            id="close-results"
+            class="icon-button"
+            aria-label="Close comparison"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="m7 7 10 10M17 7 7 17" />
+            </svg>
+          </button>
+        </header>
+        <div class="metric-head">
+          <span><i class="dot"></i>Depth</span
+          ><span><i class="dot length"></i>Length</span>
+        </div>
+        <div class="results-body"><div id="comparison"></div></div>
+      </aside>
+      <div class="map-tools" aria-label="Map controls">
+        <button id="fit" class="fit">Fit caves</button
+        ><button id="zoom-out" aria-label="Zoom out">−</button
+        ><button id="zoom-in" aria-label="Zoom in">+</button>
+      </div>
+      <span id="selection-status" class="sr-only" role="status"></span>
+      <dialog id="about">
+        <header>
+          <h2>About the data</h2>
+          <button
+            id="close-info"
+            class="icon-button"
+            aria-label="Close information"
+          >
+            ✕
+          </button>
+        </header>
+        <p>
+          <strong>__COUNT__ caves</strong> from Wikipedia's
+          <a href="__SOURCE__" target="_blank" rel="noopener noreferrer"
+            >deepest-caves list</a
+          >, retrieved __DATE__. A selected source snapshot, not a complete
+          world inventory or independently verified ranking.
+        </p>
+        <h3>Reading the comparison</h3>
+        <p>
+          Depth is the vertical span; length is the surveyed passage distance.
+          Green bars show depth and orange bars show length. Each measure uses
+          its own scale, shared across selected caves. Labels remain readable
+          even when a bar is short. Filters affect the list and map; selected
+          caves remain in the comparison.
+        </p>
+        <h3>Locations and access</h3>
+        <p>
+          Map positions are rounded to 0.1° for regional exploration. They are
+          not entrance directions or evidence of permission to visit. Visitor
+          access is unknown. Source region labels are retained, with spacing
+          normalized.
+        </p>
+        <h3>Sources and attribution</h3>
+        <p>
+          Data adapted from
+          <a href="__SOURCE__" target="_blank" rel="noopener noreferrer"
+            >Wikipedia contributors</a
+          >
+          under
+          <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CC BY-SA 4.0</a
+          >. Values are normalized; citation and language-link annotations are
+          omitted from displayed names; map positions are rounded.
+        </p>
+        <p>
+          Map ©
+          <a
+            href="https://www.openstreetmap.org/copyright"
+            target="_blank"
+            rel="noopener noreferrer"
+            >OpenStreetMap contributors</a
+          >. Leaflet is bundled locally. Map tiles load from OpenStreetMap; the
+          provider receives your IP address and the requested map area. Google
+          links open a search only when clicked. No accounts, analytics,
+          advertising or saved searches. GitHub Pages retains hosting logs under
+          its own policies.
+        </p>
+        <p>
+          <a
+            href="https://github.com/snowball-projects/cave-atlas"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Source &amp; documentation</a
+          >
+          ·
+          <a
+            href="THIRD-PARTY-NOTICES.txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Licenses</a
+          >
+          ·
+          <a
+            href="https://github.com/snowball-projects/cave-atlas/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Report an issue</a
+          >
+        </p>
+        <p>
+          A project by
+          <a href="https://snowball-projects.github.io/">snowball</a>. Version
+          __VERSION__.
+        </p>
+      </dialog>
+      <noscript
+        ><p class="map-error">
+          cave atlas needs JavaScript for the interactive map. You can still
+          <a href="caves.json">download the cave catalogue</a> or read the
+          <a href="https://github.com/snowball-projects/cave-atlas"
+            >documentation</a
+          >.
+        </p></noscript
+      >
+      <script type="application/json" id="catalog">
+        __CATALOG__
+      </script>
+    </main>
+    <script src="vendor/leaflet.js" defer></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>
