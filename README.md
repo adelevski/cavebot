@@ -44,3 +44,5 @@ Version 0.3.0 renames cave atlas to **spelunk**. Its identity is inspired by
 digital exploration inside caves. The current app is still a map and measurement
 comparison; rotatable 3D surveys are the next planned feature, only where real
 measurements/models and suitable permissions are available.
+
+[Operations](https://snowball-projects.github.io/operations/#spelunk)
